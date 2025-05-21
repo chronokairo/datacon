@@ -32,74 +32,105 @@
             <a href="#">Baixar na App Store</a>
         </div>
     </section>
+    <section class="description">
+        <h2>Descrição do Aplicativo</h2>
+        <p class="description-text">O DataCon é uma ferramenta inovadora que facilita a análise de dados qualitativos,
+            permitindo que os
+            usuários organizem, filtrem e interpretem informações de maneira eficiente. Com uma interface amigável e
+            recursos avançados, o DataCon é ideal para pesquisadores, estudantes e profissionais de diversas áreas.</p>
+        <p>
+        <h2> Download</h2>
+        </p>
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="imagens/imagem_2 (1).png" alt="Imagem 1" class="carousel-image active">
+                    <img src="imagens/img_1 .png" alt="Imagem 2" class="carousel-image">
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </section>
 
-    <!-- Seção duplicada comentada -->
-    <!--
-    <section class="features">
-        <h2>Recursos</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h3>Análise Intuitiva</h3>
-                <p>Interface simples e fácil de usar</p>
+
+        <section id="features" class="features-section">
+            <h2 class="section-title">Principais Funcionalidades</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="imagens/lupa.png" alt="Análise de Dados" class="feature-icon">
+                    <h3>Análise de Dados</h3>
+                    <p>Transforme grandes volumes de dados em informações valiosas com nossa poderosa ferramenta de
+                        análise.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <img src="imagens/pasta.png" alt="Guia de Artigo" class="feature-icon">
+                    <h3>Guia de Artigo</h3>
+                    <p>Facilite a confecção de artigos científicos, analisando e filtrando dados com praticidade.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="imagens/interface.png" alt="Interface Intuitiva" class="feature-icon">
+                    <h3>Interface Intuitiva</h3>
+                    <p>Navegue facilmente pelo aplicativo com uma interface amigável e acessível.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Sobre -->
+        <div id="sobreModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtn">&times;</span>
+                <h2>Sobre o DataCon</h2>
+                <p>O DataCon é um aplicativo que visa facilitar a análise e interpretação de grandes volumes de dados.
+                    Com uma interface intuitiva e funcionalidades avançadas, o DataCon é a escolha ideal para
+                    profissionais que buscam eficiência e precisão em suas análises.</p>
             </div>
         </div>
-    </section>
-    -->
 
-    <section id="features" class="features-section">
-        <h2 class="section-title">Principais Funcionalidades</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="imagens/lupa.png" alt="Análise de Dados" class="feature-icon">
-                <h3>Análise de Dados</h3>
-                <p>Transforme grandes volumes de dados em informações valiosas com nossa poderosa ferramenta de análise.
-                </p>
-            </div>
-            <div class="feature-card">
-                <img src="imagens/pasta.png" alt="Guia de Artigo" class="feature-icon">
-                <h3>Guia de Artigo</h3>
-                <p>Facilite a confecção de artigos científicos, analisando e filtrando dados com praticidade.</p>
-            </div>
-            <div class="feature-card">
-                <img src="imagens/interface.png" alt="Interface Intuitiva" class="feature-icon">
-                <h3>Interface Intuitiva</h3>
-                <p>Navegue facilmente pelo aplicativo com uma interface amigável e acessível.</p>
-            </div>
-        </div>
-    </section>
+        <footer>
+            &copy; 2025 DataCon. Todos os direitos reservados.
+        </footer>
 
-    <!-- Modal Sobre -->
-    <div id="sobreModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeModalBtn">&times;</span>
-            <h2>Sobre o DataCon</h2>
-            <p>O DataCon é um aplicativo que visa facilitar a análise e interpretação de grandes volumes de dados.
-                Com uma interface intuitiva e funcionalidades avançadas, o DataCon é a escolha ideal para
-                profissionais que buscam eficiência e precisão em suas análises.</p>
-        </div>
-    </div>
+        <!-- Script para modal -->
+        <script>
+            document.getElementById("openModalBtn").addEventListener("click", function (e) {
+                e.preventDefault();
+                document.getElementById("sobreModal").style.display = "block";
+            });
 
-    <footer>
-        &copy; 2025 DataCon. Todos os direitos reservados.
-    </footer>
-
-    <!-- Script para modal -->
-    <script>
-        document.getElementById("openModalBtn").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("sobreModal").style.display = "block";
-        });
-
-        document.getElementById("closeModalBtn").addEventListener("click", function () {
-            document.getElementById("sobreModal").style.display = "none";
-        });
-
-        window.addEventListener("click", function (e) {
-            if (e.target == document.getElementById("sobreModal")) {
+            document.getElementById("closeModalBtn").addEventListener("click", function () {
                 document.getElementById("sobreModal").style.display = "none";
+            });
+
+            window.addEventListener("click", function (e) {
+                if (e.target == document.getElementById("sobreModal")) {
+                    document.getElementById("sobreModal").style.display = "none";
+                }
+            });
+        </script>
+        <script>
+            const images = document.querySelectorAll(".carousel-image");
+            const nextBtn = document.querySelector(".carousel-btn.next");
+            const prevBtn = document.querySelector(".carousel-btn.prev");
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                images.forEach((img, index) => {
+                    img.classList.toggle("active", index === currentIndex);
+                });
             }
-        });
-    </script>
+
+            nextBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel();
+            });
+        </script>
+
 </body>
 
 </html>
