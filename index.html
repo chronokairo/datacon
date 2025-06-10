@@ -17,20 +17,63 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#sobre" class="nav-gradient">Sobre</a></li>
-                <li><a href="#funcionalidades" class="nav-gradient">Funcionalidades</a></li>
+            <li><a href="#hero" class="nav-gradient">Contato</a></li>
+            <li><a href="#sobreModal" id="openModalBtn" class="nav-gradient">Sobre</a></li>
+            <li><a href="#pricing-section" class="nav-gradient">Preços</a></li>
+            <li><a href="#features" class="nav-gradient">Funcionalidades</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Nova seção de destaque -->
+    <section class="highlight-banner">
+        <div class="stats-pill">
+            <span class="rocket-icon">🚀</span> Mais de 5.000 pesquisadores já revolucionaram suas análises
+        </div>
+        
+        <div class="highlight-content">
+            <div class="highlight-text">
+                <h1>Domine a <span class="gradient-text">Análise de Dados</span> Qualitativos</h1>
+                <p class="highlight-description">Transforme entrevistas, documentos e pesquisas em insights poderosos. Uma plataforma completa para categorizar, visualizar e interpretar dados qualitativos com precisão e eficiência.</p>
+                
+                <div class="highlight-buttons">
+                    <a href="#" class="btn-primary">Explorar Recursos <span class="arrow-icon">→</span></a>
+                    <a href="#" class="btn-outline">Ver Demo</a>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Ferramentas<br>de Análise</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>97%</h3>
+                        <p>Taxa de<br>Satisfação</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4x</h3>
+                        <p>Aumento de<br>Produtividade</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-image">
+                <div class="app-preview">
+                    <img src="imagens/Logo_DataCon.png" alt="DataCon App Preview" class="main-preview">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="hero" class="hero">
         <h2>Plataforma de Análise de Dados Qualitativos</h2>
         <p>O DataCon é um aplicativo que permite a análise e categorização de dados qualitativos de forma prática e
             intuitiva.</p>
         <div class="buttons">
-            <a href="#">Baixar na Google Play</a>
-            <a href="#">Baixar na App Store</a>
-            <a href="#">Baixe no Portal</a>
+             <!--  <a href="#">Baixar na Google Play</a>
+            <a href="#">Baixar na App Store</a>-->
+            <a href="#">Download</a>
         </div>
     </section>
     <section class="description">
@@ -88,6 +131,236 @@
             </div>
         </div>
 
+        <!-- Pricing Cards -->
+        <section id="pricing-section" class="pricing-section">
+            <h2 class="section-title">Planos e Preços</h2>
+            <div class="container">
+                <div class="pricing-grid">
+                    <!-- Starter Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Básico</h3>
+                            <p class="plan-description">Ideal para estudantes e pesquisadores iniciantes</p>
+                            <div class="plan-price">
+                                <span class="price-free">
+                                    <span class="amount">Gratuito</span>
+                                </span>
+                            </div>
+                            <p class="price-note">
+                                <span>Recursos essenciais</span>
+                            </p>
+                        </div>
+
+                        <div class="pricing-features">
+                            <ul class="features-list">
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Análise de até 100 entradas de dados
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    3 projetos simultâneos
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Ferramentas básicas de categorização
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Exportação em formato PDF
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Suporte por email
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-footer">
+                            <button class="btn btn-outline btn-large">Começar Gratuitamente</button>
+                            <p class="trial-note">Sem necessidade de cartão</p>
+                        </div>
+                    </div>
+
+                    <!-- Professional Plan -->
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Mais Popular</div>
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Pesquisador Pro</h3>
+                            <p class="plan-description">Para pesquisadores e acadêmicos</p>
+                            <div class="plan-price">
+                                <span class="price-monthly">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">147</span>
+                                    <span class="period">/mês</span>
+                                </span>
+                                <span class="price-yearly hidden">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">127</span>
+                                    <span class="period">/mês</span>
+                                </span>
+                            </div>
+                            <p class="price-note">
+                                <span class="yearly-note hidden">Cobrado anualmente (R$ 1.524)</span>
+                            </p>
+                        </div>
+
+                        <div class="pricing-features">
+                            <ul class="features-list">
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Dados ilimitados
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    10 projetos simultâneos
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Análise avançada de sentimentos
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Reconhecimento de padrões
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Exportação em múltiplos formatos
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Integração com softwares acadêmicos
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary btn-large">Começar Agora</button>
+                            <p class="trial-note">14 dias grátis</p>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Institucional</h3>
+                            <p class="plan-description">Para universidades e centros de pesquisa</p>
+                            <div class="plan-price">
+                                <span class="price-monthly">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">397</span>
+                                    <span class="period">/mês</span>
+                                </span>
+                                <span class="price-yearly hidden">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">347</span>
+                                    <span class="period">/mês</span>
+                                </span>
+                            </div>
+                            <p class="price-note">
+                                <span class="yearly-note hidden">Cobrado anualmente (R$ 4.164)</span>
+                            </p>
+                        </div>
+
+                        <div class="pricing-features">
+                            <ul class="features-list">
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Até 50 usuários
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Projetos ilimitados
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Ferramentas de colaboração em equipe
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    IA avançada para análise automática
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    Suporte dedicado 24/7
+                                </li>
+                                <li class="feature-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12" />
+                                    </svg>
+                                    API para integração com sistemas internos
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-footer">
+                            <button class="btn btn-outline btn-large">Falar com Vendas</button>
+                            <p class="trial-note">Demo personalizada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toggle anual/mensal -->
+                <div class="pricing-toggle-container">
+                    <span>Cobrança Mensal</span>
+                    <label class="switch">
+                        <input type="checkbox" id="pricingToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Cobrança Anual <span class="discount-badge">Economize 15%</span></span>
+                </div>
+            </div>
+        </section>
+
         <footer>
             &copy; 2025 DataCon. Todos os direitos reservados.
         </footer>
@@ -129,6 +402,40 @@
             prevBtn.addEventListener("click", () => {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
                 updateCarousel();
+            });
+        </script>
+        
+        <!-- Script para o toggle de preços anual/mensal -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Seleciona o checkbox do toggle
+                const pricingToggle = document.getElementById('pricingToggle');
+                
+                // Seleciona todos elementos de preço mensal e anual
+                const monthlyPrices = document.querySelectorAll('.price-monthly');
+                const yearlyPrices = document.querySelectorAll('.price-yearly');
+                const yearlyNotes = document.querySelectorAll('.yearly-note');
+                
+                // Função para alternar entre preços mensais e anuais
+                function togglePricing() {
+                    if (pricingToggle.checked) {
+                        // Mostrar preços anuais
+                        monthlyPrices.forEach(item => item.classList.add('hidden'));
+                        yearlyPrices.forEach(item => item.classList.remove('hidden'));
+                        yearlyNotes.forEach(item => item.classList.remove('hidden'));
+                    } else {
+                        // Mostrar preços mensais
+                        monthlyPrices.forEach(item => item.classList.remove('hidden'));
+                        yearlyPrices.forEach(item => item.classList.add('hidden'));
+                        yearlyNotes.forEach(item => item.classList.add('hidden'));
+                    }
+                }
+                
+                // Adiciona evento de mudança ao toggle
+                pricingToggle.addEventListener('change', togglePricing);
+                
+                // Inicializa com a exibição correta quando a página carrega
+                togglePricing();
             });
         </script>
 
